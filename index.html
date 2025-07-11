@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lithic History, Geology & the Enlightenment</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Collapsible Side Navigation -->
+  <nav id="sideNav" class="sidenav">
+    <button class="closebtn" id="closeNav">&times;</button>
+    <div class="nav-profile">
+      <div class="profile-image"></div>
+      <h3>Lithic Journey</h3>
+    </div>
+    <ul>
+      <li><a href="#intro"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#history"><i class="fas fa-landmark"></i> Historical Geology</a></li>
+      <li><a href="#enlightenment"><i class="fas fa-lightbulb"></i> Enlightenment Insights</a></li>
+      <li><a href="#romanticism"><i class="fas fa-mountain"></i> Romanticism & Environment</a></li>
+      <li><a href="#interactive"><i class="fas fa-hands"></i> Interactive Elements</a></li>
+      <li><a href="#sources"><i class="fas fa-book"></i> Sources</a></li>
+    </ul>
+    <div class="nav-footer">
+      <p>German Lithic Project</p>
+    </div>
+  </nav>
+
+  <!-- Header with Banner & Nav Toggle -->
+  <header id="header">
+    <button class="openbtn" id="openNav">&#9776;</button>
+    <div class="banner">
+        <div class="rocks">
+            <div></div>
+            <div></div>
+            <div></div><div></div>
+          </div>
+          
+      <h1 class="fade-in">Lithic History, Geology & the Enlightenment</h1>
+      <p class="fade-in delay-1">
+        Discover how ancient rocks and transformative philosophies shaped our view of the Earth.
+      </p>
+      <a href="#intro" class="cta-button fade-in delay-2">Begin Journey</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <p>Scroll to explore</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Intro Section -->
+    <section id="intro" class="section landing-section">
+      <div class="container">
+        <h2 class="section-title">Welcome to the Journey Through Stone</h2>
+        <div class="content-wrapper">
+          <div class="text-content">
+            <p>
+              This interactive experience explores the evolution of geological thought from early mineral classifications to modern environmental awareness. Engage with historical timelines, artistic interpretations, and scientific breakthroughs that laid the foundations for modern geology.
+            </p>
+            <p>
+              Our journey traverses the fascinating intersection of science, philosophy, and art - discovering how rocks and minerals shaped not just our understanding of Earth, but also our cultural identity.
+            </p>
+          </div>
+          <div class="visual-content">
+            <div class="feature-card">
+              <div class="icon"><i class="fas fa-microscope"></i></div>
+              <h3>Scientific Discovery</h3>
+              <p>From early classifications to empirical methods</p>
+            </div>
+            <div class="feature-card">
+              <div class="icon"><i class="fas fa-brain"></i></div>
+              <h3>Philosophical Insights</h3>
+              <p>Enlightenment thinkers reshape natural understanding</p>
+            </div>
+            <div class="feature-card">
+              <div class="icon"><i class="fas fa-palette"></i></div>
+              <h3>Artistic Interpretation</h3>
+              <p>Romanticism's lithic symbolism and metaphors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Geology Section -->
+    <section id="history" class="section history-section">
+      <div class="container">
+        <h2 class="section-title">Historical Geology & Early Lithic Studies</h2>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>1546</h3>
+              <h4>Georgius Agricola</h4>
+              <p>Published <em>De Natura Fossilium</em>, introducing the first systematic classification of minerals and stones based on physical properties.</p>
+              <div class="expand-content" id="agricola-expand">
+                <p>"The father of mineralogy" combined practical mining knowledge with scientific observation, laying groundwork for modern geology and mineralogy.</p>
+                <blockquote>"I have omitted all those things which I have not myself seen... or have not read or heard of from persons upon whom I can rely." - Agricola</blockquote>
+              </div>
+              <button class="expand-btn" data-target="agricola-expand">Read More</button>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>1556</h3>
+              <h4>De Re Metallica</h4>
+              <p>Agricola's comprehensive treatise on mining technology and metallurgy becomes the definitive text for the next 180 years.</p>
+              <div class="expand-content" id="metallica-expand">
+                <p>The extensively illustrated work covered everything from prospecting and mine administration to smelting and refining metals.</p>
+              </div>
+              <button class="expand-btn" data-target="metallica-expand">Read More</button>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>1664</h3>
+              <h4>Athanasius Kircher</h4>
+              <p>Published <em>Mundus Subterraneus</em>, exploring the Earth's interior with imaginative illustrations and theories.</p>
+              <div class="expand-content" id="kircher-expand">
+                <p>Kircher proposed a hollow Earth filled with fire channels connecting volcanoes, combining empirical observation with imaginative interpretation.</p>
+              </div>
+              <button class="expand-btn" data-target="kircher-expand">Read More</button>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>1669</h3>
+              <h4>Nicolaus Steno</h4>
+              <p>Established foundational principles of stratigraphy in <em>De solido intra solidum naturaliter contento</em>.</p>
+              <div class="expand-content" id="steno-expand">
+                <p>Steno's principles of superposition, original horizontality, and lateral continuity revolutionized understanding of rock layers.</p>
+              </div>
+              <button class="expand-btn" data-target="steno-expand">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enlightenment Insights Section -->
+    <section id="enlightenment" class="section enlightenment-section">
+      <div class="container">
+        <h2 class="section-title">Enlightenment Influences</h2>
+        <div class="enlightenment-grid">
+          <div class="enlightenment-card">
+            <div class="card-image goethe-image"></div>
+            <div class="card-content">
+              <h3>Goethe's "On Granite"</h3>
+              <p>Johann Wolfgang von Goethe reimagined granite as both a literal and metaphorical foundation of nature in his 1784 essay.</p>
+              <blockquote>"Sitting upon a high bare granite peak... I say to myself: here you rest directly on a foundation that reaches down to the deepest places of the earth."</blockquote>
+              <p>Goethe combined scientific observation with poetic sensibility, representing the Enlightenment's merging of rational inquiry with aesthetic appreciation.</p>
+            </div>
+          </div>
+          <div class="enlightenment-card">
+            <div class="card-image kant-image"></div>
+            <div class="card-content">
+              <h3>Kant's Lisbon Earthquake Analysis</h3>
+              <p>Immanuel Kant challenged supernatural interpretations by analyzing the 1755 Lisbon earthquake through empirical observation and rational thought.</p>
+              <blockquote>"The terrifying effects of this scourge may make us wiser... it is nature itself that is speaking."</blockquote>
+              <p>Kant's three essays on the disaster demonstrate the Enlightenment shift toward seeking natural explanations rather than divine retribution.</p>
+            </div>
+          </div>
+        </div>
+        <div class="earthquake-simulation">
+          <h3>The Lisbon Earthquake: A Case Study in Enlightenment Thinking</h3>
+          <div class="simulation-wrapper">
+            <div class="simulation-controls">
+              <button id="start-simulation">Start Simulation</button>
+              <div class="slider-container">
+                <label for="magnitude">Magnitude:</label>
+                <input type="range" id="magnitude" min="1" max="10" value="8">
+                <span id="magnitude-value">8.0</span>
+              </div>
+            </div>
+            <div class="simulation-display">
+              <div class="city-graphic"></div>
+              <div class="seismic-waves"></div>
+            </div>
+            <div class="simulation-explanation">
+              <div class="theological tab active" data-tab="theological">
+                <h4>Pre-Enlightenment View</h4>
+                <p>Divine punishment for sins; moral interpretation of natural disaster</p>
+              </div>
+              <div class="scientific tab" data-tab="scientific">
+                <h4>Enlightenment View</h4>
+                <p>Natural phenomenon with physical causes and effects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Romanticism & Environmental Perspectives Section -->
+    <section id="romanticism" class="section romanticism-section">
+      <div class="container">
+        <h2 class="section-title">German Romanticism & Environmental Perspectives</h2>
+        <div class="romanticism-content">
+          <div class="art-gallery">
+            <h3>Lithic Imagery in Art</h3>
+            <div class="gallery-container">
+              <div class="gallery-item">
+                <div class="artwork friedrich1"></div>
+                <div class="artwork-info">
+                  <h4>Wanderer Above the Sea of Fog</h4>
+                  <p>Caspar David Friedrich, 1818</p>
+                  <p>The solitary figure atop a rocky peak embodied the Romantic sublime.</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <div class="artwork friedrich2"></div>
+                <div class="artwork-info">
+                  <h4>Rocky Reef on the Sea Shore</h4>
+                  <p>Caspar David Friedrich, 1824</p>
+                  <p>Jagged stone formations against powerful waters.</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <div class="artwork friedrich3"></div>
+                <div class="artwork-info">
+                  <h4>Chalk Cliffs on Rügen</h4>
+                  <p>Caspar David Friedrich, 1818</p>
+                  <p>White limestone formations representing both fragility and permanence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="literary-metaphors">
+            <h3>Mining as Metaphor</h3>
+            <div class="quote-container">
+              <blockquote>
+                "The miner is working in the direction of heaven, the others more or less on or below the surface of the earth."
+                <cite>— Novalis, Heinrich von Ofterdingen, 1800</cite>
+              </blockquote>
+              <p>For German Romantic writers, caves and mines became symbolic inner landscapes where transformation and discovery occurred. Novalis, himself trained in mine engineering, transformed the mundane work of mining into a spiritual journey of self-discovery.</p>
+            </div>
+          </div>
+          
+          <div class="environmental-impact">
+            <h3>Early Environmental Management</h3>
+            <div class="mining-map">
+              <h4>Historical Mining Sites & Environmental Impact</h4>
+              <div id="map-container">
+                <!-- Interactive map will be inserted here via JavaScript -->
+                <div class="map-placeholder">Interactive Mining Map</div>
+                <div class="map-locations">
+                  <div class="location" data-id="harz">
+                    <h5>Harz Mountains</h5>
+                    <p>Silver mining from 10th century</p>
+                  </div>
+                  <div class="location" data-id="erzgebirge">
+                    <h5>Erzgebirge</h5>
+                    <p>Silver and tin mining from 12th century</p>
+                  </div>
+                  <div class="location" data-id="freiberg">
+                    <h5>Freiberg</h5>
+                    <p>Mining academy established 1765</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sustainability-concept">
+                <h4>Early Sustainability Concepts</h4>
+                <p>Hans Carl von Carlowitz introduced "nachhaltende Nutzung" (sustainable use) in his 1713 work on forestry, responding to timber shortages caused by mining operations.</p>
+                <div class="comparison-slider">
+                  <div class="before-after-container">
+                    <div class="before-image">Deforested Mining Area</div>
+                    <div class="after-image">Managed Forest Regrowth</div>
+                    <div class="slider-handle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Elements Section -->
+    <section id="interactive" class="section interactive-section">
+      <div class="container">
+        <h2 class="section-title">Interactive Learning</h2>
+        <div class="interactive-elements">
+          <div class="rock-identification">
+            <h3>Rock Identification</h3>
+            <div class="rock-samples">
+              <div class="rock-sample" data-rock="granite">
+                <div class="rock-image granite"></div>
+                <h4>Granite</h4>
+              </div>
+              <div class="rock-sample" data-rock="basalt">
+                <div class="rock-image basalt"></div>
+                <h4>Basalt</h4>
+              </div>
+              <div class="rock-sample" data-rock="limestone">
+                <div class="rock-image limestone"></div>
+                <h4>Limestone</h4>
+              </div>
+            </div>
+            <div class="rock-info">
+              <div id="granite-info" class="rock-details">
+                <h4>Granite: The Foundation</h4>
+                <p>An igneous rock central to Goethe's thinking about the earth's foundation.</p>
+                <p>"Granite suddenly emerged as the kernel and foundation of our Earth." - Goethe</p>
+                <ul>
+                    <li>Composition: Quartz, feldspar, and mica</li>
+                    <li>Formation: Slow cooling of magma beneath the Earth's surface</li>
+                    <li>Cultural significance: Symbolized permanence and eternity</li>
+                  </ul>
+                </div>
+                <div id="basalt-info" class="rock-details hidden">
+                  <h4>Basalt: The Volcanic Stone</h4>
+                  <p>An extrusive igneous rock formed by rapid cooling of lava.</p>
+                  <p>"The columnar structure of basalt added to the mystical appeal of places like the Giant's Causeway."</p>
+                  <ul>
+                    <li>Composition: Plagioclase, pyroxene, and olivine</li>
+                    <li>Formation: Rapid cooling of lava at the Earth's surface</li>
+                    <li>Cultural significance: Connected to early theories of volcanism</li>
+                  </ul>
+                </div>
+                <div id="limestone-info" class="rock-details hidden">
+                  <h4>Limestone: Record of Ancient Seas</h4>
+                  <p>A sedimentary rock that provided key evidence for the Earth's history.</p>
+                  <p>"The presence of marine fossils in mountain limestone challenged biblical timelines."</p>
+                  <ul>
+                    <li>Composition: Calcium carbonate from marine organisms</li>
+                    <li>Formation: Accumulation of shells and skeletal fragments</li>
+                    <li>Cultural significance: Fossil discoveries sparked debates about Earth's age</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="geological-quiz">
+              <h3>Test Your Knowledge</h3>
+              <div class="quiz-container">
+                <div class="quiz-question" id="question1">
+                  <h4>Question 1:</h4>
+                  <p>Which Enlightenment philosopher wrote a detailed analysis of the 1755 Lisbon earthquake?</p>
+                  <div class="quiz-options">
+                    <label><input type="radio" name="q1" value="a"> Voltaire</label>
+                    <label><input type="radio" name="q1" value="b"> Rousseau</label>
+                    <label><input type="radio" name="q1" value="c"> Kant</label>
+                    <label><input type="radio" name="q1" value="d"> Hume</label>
+                  </div>
+                </div>
+                <div class="quiz-question" id="question2">
+                  <h4>Question 2:</h4>
+                  <p>Who is considered the "father of mineralogy" for his systematic classification of minerals?</p>
+                  <div class="quiz-options">
+                    <label><input type="radio" name="q2" value="a"> Athanasius Kircher</label>
+                    <label><input type="radio" name="q2" value="b"> Georgius Agricola</label>
+                    <label><input type="radio" name="q2" value="c"> Nicolaus Steno</label>
+                    <label><input type="radio" name="q2" value="d"> Alexander von Humboldt</label>
+                  </div>
+                </div>
+                <div class="quiz-question" id="question3">
+                  <h4>Question 3:</h4>
+                  <p>Which work introduced the concept of "sustainable use" in response to deforestation from mining?</p>
+                  <div class="quiz-options">
+                    <label><input type="radio" name="q3" value="a"> Goethe's "On Granite"</label>
+                    <label><input type="radio" name="q3" value="b"> Novalis' "Heinrich von Ofterdingen"</label>
+                    <label><input type="radio" name="q3" value="c"> Carlowitz's "Sylvicultura Oeconomica"</label>
+                    <label><input type="radio" name="q3" value="d"> Humboldt's "Cosmos"</label>
+                  </div>
+                </div>
+                <button id="submit-quiz">Submit Answers</button>
+                <div id="quiz-results" class="hidden">
+                  <h4>Results:</h4>
+                  <p>Your score: <span id="score">0</span>/3</p>
+                  <div id="feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Sources Section -->
+      <section id="sources" class="section sources-section">
+        <div class="container">
+          <h2 class="section-title">Sources & Further Reading</h2>
+          <div class="sources-content">
+            <div class="primary-sources">
+              <h3>Primary Sources</h3>
+              <ul class="source-list">
+                <li>
+                  <span class="source-title">De Natura Fossilium</span>
+                  <span class="source-author">Georgius Agricola</span>
+                  <span class="source-year">1546</span>
+                  <p class="source-desc">First systematic classification of minerals and stones.</p>
+                </li>
+                <li>
+                  <span class="source-title">De Re Metallica</span>
+                  <span class="source-author">Georgius Agricola</span>
+                  <span class="source-year">1556</span>
+                  <p class="source-desc">Comprehensive treatise on mining and metallurgy.</p>
+                </li>
+                <li>
+                  <span class="source-title">Mundus Subterraneus</span>
+                  <span class="source-author">Athanasius Kircher</span>
+                  <span class="source-year">1664</span>
+                  <p class="source-desc">Exploration of Earth's interior with early geological theories.</p>
+                </li>
+                <li>
+                  <span class="source-title">On Granite</span>
+                  <span class="source-author">Johann Wolfgang von Goethe</span>
+                  <span class="source-year">1784</span>
+                  <p class="source-desc">Philosophical and scientific insights on granite's importance.</p>
+                </li>
+                <li>
+                  <span class="source-title">Essays on the Lisbon Earthquake</span>
+                  <span class="source-author">Immanuel Kant</span>
+                  <span class="source-year">1756</span>
+                  <p class="source-desc">Rational analysis of the 1755 Lisbon earthquake.</p>
+                </li>
+                <li>
+                  <span class="source-title">Heinrich von Ofterdingen</span>
+                  <span class="source-author">Novalis</span>
+                  <span class="source-year">1800</span>
+                  <p class="source-desc">Literary work featuring mining metaphors and underground journeys.</p>
+                </li>
+                <li>
+                  <span class="source-title">Sylvicultura Oeconomica</span>
+                  <span class="source-author">Hans Carl von Carlowitz</span>
+                  <span class="source-year">1713</span>
+                  <p class="source-desc">Early treatise on sustainable forestry management.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="secondary-sources">
+              <h3>Secondary Sources & Modern Studies</h3>
+              <ul class="source-list">
+                <li>
+                  <span class="source-title">Earth's Deep History: How It Was Discovered and Why It Matters</span>
+                  <span class="source-author">Martin J.S. Rudwick</span>
+                  <span class="source-year">2014</span>
+                </li>
+                <li>
+                  <span class="source-title">The Mountains of Saint Francis: Discovering the Geologic Events That Shaped Our Earth</span>
+                  <span class="source-author">Walter Alvarez</span>
+                  <span class="source-year">2009</span>
+                </li>
+                <li>
+                  <span class="source-title">The Romantic Conception of Life: Science and Philosophy in the Age of Goethe</span>
+                  <span class="source-author">Robert J. Richards</span>
+                  <span class="source-year">2002</span>
+                </li>
+                <li>
+                  <span class="source-title">German Romantic Painting</span>
+                  <span class="source-author">William Vaughan</span>
+                  <span class="source-year">1994</span>
+                </li>
+              </ul>
+            </div>
+            <div class="digital-resources">
+              <h3>Digital Archives & Resources</h3>
+              <ul class="source-list">
+                <li>
+                  <span class="source-title">Linda Hall Library Digital Collections: Geology</span>
+                  <p class="source-desc">Digitized historical geology texts and illustrations.</p>
+                </li>
+                <li>
+                  <span class="source-title">The Complete Works of Caspar David Friedrich (Digital Archive)</span>
+                  <p class="source-desc">High-resolution images of Friedrich's landscape paintings.</p>
+                </li>
+                <li>
+                  <span class="source-title">Mining History Archive (Freiberg University)</span>
+                  <p class="source-desc">Historical documents relating to mining practices in Germany.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>Lithic History Project</h3>
+            <p>Exploring the intersection of geology, philosophy, and culture</p>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#intro">Home</a></li>
+              <li><a href="#history">Historical Geology</a></li>
+              <li><a href="#enlightenment">Enlightenment Insights</a></li>
+              <li><a href="#romanticism">Romanticism & Environment</a></li>
+              <li><a href="#interactive">Interactive Elements</a></li>
+              <li><a href="#sources">Sources</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>For more information or academic inquiries:</p>
+            <p>lithichistory@example.edu</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Lithic History Project. All rights reserved.</p>
+          <p>Created as part of the German Cultural Studies Program</p>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="script.js"></script>
+  </body>
+  </html>

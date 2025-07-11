@@ -1,0 +1,1464 @@
+/* ====== GLOBAL STYLES ====== */
+:root {
+    /* Color palette */
+    --primary-dark: #2c3e50;
+    --primary-light: #ecf0f1;
+    --accent-1: #3498db;
+    --accent-2: #2ecc71;
+    --accent-3: #e74c3c;
+    --gray-dark: #34495e;
+    --gray-medium: #7f8c8d;
+    --gray-light: #bdc3c7;
+    
+    /* Rock colors */
+    --granite-color: #9e9e9e;
+    --basalt-color: #424242;
+    --limestone-color: #e0e0e0;
+    
+    /* Typography */
+    --heading-font: 'Playfair Display', Georgia, serif;
+    --body-font: 'Open Sans', Arial, sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    overflow-x: hidden;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  h2.section-title:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: var(--accent-1);
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    color: var(--gray-dark);
+  }
+  
+  h4 {
+    font-size: 1.4rem;
+    color: var(--accent-1);
+  }
+  
+  p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  a {
+    color: var(--accent-1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--primary-dark);
+  }
+  
+  blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--accent-1);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--gray-dark);
+  }
+  
+  cite {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    margin-top: 0.5rem;
+  }
+  
+  ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 5rem 0;
+    position: relative;
+  }
+  
+  .section:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #2b2b2b; /* Fallback color */
+    /* Base animated radial gradient for a shifting geological vibe */
+    background: radial-gradient(circle, #3d3d3d, #1a1a1a);
+    animation: tectonicPulse 25s infinite ease-in-out;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Tectonic Pulse: a subtle scale/rotation to simulate earth's shifting layers */
+  @keyframes tectonicPulse {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.05) rotate(3deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .banner {
+    padding: 2rem;
+    max-width: 800px;
+  }
+  
+  .banner h1 {
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-1);
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-button:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    animation: bounce 2s infinite;
+  }
+  
+  .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .mouse::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(-5px);
+    }
+  }
+  
+  /* ====== NAVIGATION ====== */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-dark);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidenav.open {
+    width: 280px;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: var(--primary-light);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-profile {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--accent-1);
+    margin: 0 auto 15px;
+    background-image: url('https://images.unsplash.com/photo-1557672172-298e090bd0f1');
+    background-size: cover;
+    background-position: center;
+    border: 3px solid white;
+  }
+  
+  .nav-profile h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .sidenav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidenav ul li {
+    margin-bottom: 5px;
+  }
+  
+  .sidenav ul li a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--primary-light);
+    display: block;
+    transition: 0.3s;
+    border-left: 4px solid transparent;
+  }
+  
+  .sidenav ul li a i {
+    margin-right: 10px;
+    width: 25px;
+    text-align: center;
+  }
+  
+  .sidenav ul li a:hover, .sidenav ul li a.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--accent-1);
+  }
+  
+  .nav-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  
+  .openbtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+  
+  .openbtn:hover {
+    background-color: var(--accent-1);
+  }
+  
+  /* ====== LANDING SECTION ====== */
+  .landing-section {
+    padding-top: 3rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1 1 400px;
+  }
+  
+  .visual-content {
+    flex: 1 1 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    flex: 1 1 30%;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-card .icon {
+    font-size: 2.5rem;
+    color: var(--accent-1);
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.95rem;
+    color: var(--gray-medium);
+  }
+  
+  /* ====== HISTORY SECTION ====== */
+  .history-section {
+    background-color: #f5f5f5;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--accent-1);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+  }
+  
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid var(--accent-1);
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    left: 50%;
+  }
+  
+  .left::after {
+    right: -12px;
+  }
+  
+  .right::after {
+    left: -12px;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content h3 {
+    color: var(--accent-1);
+    margin-top: 0;
+    font-size: 1.6rem;
+  }
+  
+  .timeline-content h4 {
+    margin-top: 0;
+    color: var(--primary-dark);
+  }
+  
+  .expand-content {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-light);
+  }
+  
+  .expand-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--accent-1);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .expand-btn::after {
+    content: "+";
+    margin-left: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .expand-btn.active::after {
+    content: "-";
+  }
+  
+  /* ====== ENLIGHTENMENT SECTION ====== */
+  .enlightenment-section {
+    background-color: white;
+  }
+  
+  .enlightenment-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .enlightenment-card {
+    flex: 1 1 45%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .card-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .goethe-image {
+    background-image: url('640px-Bianco_Sardo_Granit_mit_polierter_Oberfläche.jpg');
+  }
+  
+/* Continuing from the kant-image section */
+.kant-image {
+    background-image: url('header-lisbon-disaster.jpg');
+  }
+  
+  .card-content {
+    padding: 2rem;
+  }
+  
+  .card-content h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .card-content blockquote {
+    margin: 1.5rem 0;
+  }
+  
+  /* ====== EARTHQUAKE SIMULATION ====== */
+  .earthquake-simulation {
+    margin-top: 3rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .simulation-wrapper {
+    margin-top: 2rem;
+  }
+  
+  .simulation-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  #start-simulation {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  #start-simulation:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .slider-container label {
+    font-weight: bold;
+  }
+  
+  .slider-container input {
+    cursor: pointer;
+  }
+  
+  .simulation-display {
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .city-graphic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-image: url('https://images.unsplash.com/photo-1573455494060-c5595004fb6c');
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+  }
+  
+  .seismic-waves {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.2);
+    opacity: 0;
+  }
+  
+  .simulation-explanation {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .tab h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ====== ROMANTICISM SECTION ====== */
+  .romanticism-section {
+    background-color: #f5f5f5;
+  }
+  
+  .romanticism-content {
+    margin-top: 2rem;
+  }
+  
+  .art-gallery {
+    margin-bottom: 3rem;
+  }
+  
+  .gallery-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .gallery-item {
+    flex: 1 1 30%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .artwork {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .friedrich1 {
+    background-image: url('Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg');
+  }
+  
+  .friedrich2 {
+    background-image: url('friedrich005.jpg');
+  }
+  
+  .friedrich3 {
+    background-image: url('test.jpg');
+  }
+  
+  .artwork-info {
+    padding: 1.5rem;
+  }
+  
+  .artwork-info h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .literary-metaphors {
+    margin-bottom: 3rem;
+  }
+  
+  .quote-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+  }
+  
+  .quote-container blockquote {
+    margin-bottom: 1.5rem;
+  }
+  
+  .environmental-impact {
+    margin-bottom: 3rem;
+  }
+  
+  .mining-map {
+    margin-top: 1.5rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #map-container {
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .map-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: var(--gray-medium);
+  }
+  
+  .map-locations {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .location {
+    background-color: var(--primary-light);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .location:hover {
+    background-color: var(--accent-1);
+    color: white;
+  }
+  
+  .sustainability-concept {
+    margin-top: 2rem;
+  }
+  
+  .comparison-slider {
+    height: 300px;
+    margin-top: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .before-after-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .before-image, .after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .before-image {
+    background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969');
+    z-index: 1;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  
+  .after-image {
+    background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d');
+  }
+  
+  .slider-handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: ew-resize;
+  }
+  
+  .slider-handle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ====== INTERACTIVE SECTION ====== */
+  .interactive-section {
+    background-color: white;
+  }
+  
+  .interactive-elements {
+    margin-top: 2rem;
+  }
+  
+  .rock-identification {
+    margin-bottom: 3rem;
+  }
+  
+  .rock-samples {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .rock-sample {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .rock-sample:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rock-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .granite {
+    background-color: var(--granite-color);
+  }
+  
+  .basalt {
+    background-color: var(--basalt-color);
+  }
+  
+  .limestone {
+    background-color: var(--limestone-color);
+  }
+  
+  .rock-sample h4 {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .rock-info {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rock-details {
+    transition: all 0.3s ease;
+  }
+  
+  .rock-details.hidden {
+    display: none;
+  }
+  
+  .geological-quiz {
+    margin-top: 3rem;
+  }
+  
+  .quiz-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+  }
+  
+  .quiz-question {
+    margin-bottom: 2rem;
+  }
+  
+  .quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .quiz-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  #submit-quiz {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  #submit-quiz:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  #quiz-results {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  #quiz-results.hidden {
+    display: none;
+  }
+  
+  /* ====== SOURCES SECTION ====== */
+  .sources-section {
+    background-color: #f5f5f5;
+  }
+  
+  .sources-content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .source-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .source-list li {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .source-title {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .source-author {
+    display: block;
+    color: var(--accent-1);
+    margin-bottom: 0.5rem;
+  }
+  
+  .source-year {
+    display: inline-block;
+    background-color: var(--gray-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .source-desc {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--gray-medium);
+  }
+  
+  /* ====== FOOTER ====== */
+  footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    padding: 4rem 0 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-logo {
+    flex: 1 1 30%;
+  }
+  
+  .footer-nav {
+    flex: 1 1 30%;
+  }
+  
+  .footer-nav ul {
+    list-style-type: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+  
+  .footer-nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-nav ul li a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: var(--accent-1);
+  }
+  
+  .footer-contact {
+    flex: 1 1 30%;
+  }
+  
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray-light);
+  }
+  
+  /* ====== RESPONSIVE STYLES ====== */
+  @media (max-width: 992px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    .timeline::after {
+      left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item.left::after, .timeline-item.right::after {
+        left: 15px;
+      }
+      
+      .timeline-item.right {
+        left: 0;
+      }
+      
+      .simulation-explanation {
+        flex-direction: column;
+      }
+      
+      .tab {
+        margin-bottom: 1rem;
+      }
+      
+      .gallery-item {
+        flex: 1 1 100%;
+      }
+      
+      .rock-samples {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .banner {
+        padding: 1rem;
+      }
+      
+      .banner p {
+        font-size: 1.1rem;
+      }
+      
+      .openbtn {
+        padding: 5px 10px;
+        font-size: 20px;
+      }
+      
+      .feature-card {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+      }
+      
+      .enlightenment-grid {
+        flex-direction: column;
+      }
+      
+      .enlightenment-card {
+        margin-bottom: 2rem;
+      }
+      
+      .footer-content > div {
+        flex: 1 1 100%;
+        margin-bottom: 2rem;
+      }
+      
+      .sources-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .section {
+        padding: 3rem 0;
+      }
+      
+      .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+      
+      .timeline-content {
+        padding: 15px;
+      }
+      
+      .timeline-content h3 {
+        font-size: 1.4rem;
+      }
+      
+      .map-locations {
+        flex-direction: column;
+      }
+      
+      .location {
+        margin-bottom: 1rem;
+      }
+    }
+    
+    /* ====== ANIMATIONS ====== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.3s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.6s;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* ====== JAVASCRIPT INTERACTION STYLES ====== */
+    .highlight {
+      background-color: rgba(52, 152, 219, 0.1);
+      border-left: 4px solid var(--accent-1);
+    }
+    
+    .error {
+      border: 1px solid var(--accent-3);
+      background-color: rgba(231, 76, 60, 0.1);
+    }
+    
+    .success {
+      border: 1px solid var(--accent-2);
+      background-color: rgba(46, 204, 113, 0.1);
+    }
+    
+    .expand-content.active {
+      display: block;
+      animation: expandContent 0.3s ease forwards;
+    }
+    
+    @keyframes expandContent {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* ====== ACCESSIBILITY STYLES ====== */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-dark);
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s ease;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    /* Better focus styles for keyboard navigation */
+    a:focus, button:focus, input:focus, [tabindex]:focus {
+      outline: 3px solid var(--accent-1);
+      outline-offset: 2px;
+    }
+    
+    /* High contrast mode adjustments */
+    @media (forced-colors: active) {
+      .cta-button, .openbtn, #start-simulation, #submit-quiz {
+        border: 2px solid currentColor;
+      }
+      
+      .sidenav ul li a.active {
+        border-left: 4px solid currentColor;
+      }
+    }
+    
+    /* ====== PRINT STYLES ====== */
+    @media print {
+      .sidenav, .openbtn, .scroll-indicator, .simulation-controls, .interactive-elements, footer {
+        display: none !important;
+      }
+      
+      body {
+        color: black;
+        background-color: white;
+      }
+      
+      a {
+        text-decoration: underline;
+        color: black;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
+      
+      img, .card-image, .artwork {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+      }
+      
+      .container {
+        width: 100%;
+        padding: 0;
+      }
+      
+      .section {
+        padding: 2rem 0;
+        page-break-inside: avoid;
+      }
+      
+      .timeline::after {
+        display: none;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding: 0;
+        page-break-inside: avoid;
+      }
+      
+      .timeline-item::after {
+        display: none;
+      }
+      
+      .timeline-item.right {
+        left: 0;
+      }
+      
+      .expand-content {
+        display: block !important;
+      }
+      
+      .expand-btn {
+        display: none;
+      }
+      
+      .sources-content {
+        grid-template-columns: 1fr;
+      }
+    }
+   /* ========== ROCK FRAGMENTS ========== */
+header .rocks div {
+    position: absolute;
+    /* 1) Blend a lighter overlay on top of the rock texture */
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+      url("https://images.unsplash.com/photo-1568626383110-ff296b8a099e") center / cover no-repeat;
+    background-blend-mode: lighten;
+  
+    /* 2) Stronger box-shadow to create a "glow" and depth */
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.5),  /* outer glow */
+      inset 0 0 20px rgba(0, 0, 0, 0.7),  /* inner shadow for depth */
+      0 15px 30px rgba(0, 0, 0, 0.5);     /* drop shadow */
+  
+    /* 3) A slightly jagged shape, but feel free to tweak polygon points */
+    clip-path: polygon(0% 15%, 20% 0%, 85% 5%, 100% 30%, 90% 90%, 60% 100%, 15% 85%);
+    border-radius: 15px;
+  
+    /* 4) The dual animations (floating + rotating) */
+    animation: floatRock 25s infinite ease-in-out, rotateRock 50s infinite linear;
+  
+    /* 5) Extra brightness & contrast to ensure they're visible */
+    filter: brightness(2) contrast(1.2) saturate(1.2);
+  
+    /* 6) A thicker, whiter border to outline them more strongly */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+  
+    /* Keep them fully visible */
+    opacity: 1;
+    transform-origin: center;
+  }
+  
+  /* Adjust sizes/positions so they're bigger and easier to see */
+  header .rocks div:nth-child(1) {
+    width: 220px;
+    height: 220px;
+    top: 12%;
+    left: 15%;
+    animation-delay: 0s, 0s;
+  }
+  header .rocks div:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    top: 45%;
+    left: 70%;
+    animation-delay: 3s, 3s;
+  }
+  header .rocks div:nth-child(3) {
+    width: 180px;
+    height: 180px;
+    top: 75%;
+    left: 25%;
+    animation-delay: 6s, 6s;
+  }
+  
+  /* Floating animation: bigger "bounce" if you want them super noticeable */
+  @keyframes floatRock {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-40px); }
+  }
+  
+  /* Slow rotation in full 360° */
+  @keyframes rotateRock {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
